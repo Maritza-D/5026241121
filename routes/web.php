@@ -51,21 +51,13 @@ Route::get('/makeover', function () {
     return view('makeover');
 });
 
-/*
-|--------------------------------------------------------------------------
-| Dosen Controller
-|--------------------------------------------------------------------------
-*/
 
 Route::get('/dosen', [DosenController::class, 'index']);
 
 Route::get('/biodata', [DosenController::class, 'biodata']);
 
-/*
-|--------------------------------------------------------------------------
-| Pegawai Controller
-|--------------------------------------------------------------------------
-*/
+
+Route::get('/pegawai', [PegawaiController::class, 'pegawai']);
 
 Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
 
@@ -73,11 +65,6 @@ Route::get('/formulir', [PegawaiController::class, 'formulir']);
 
 Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
 
-/*
-|--------------------------------------------------------------------------
-| Blog Controller
-|--------------------------------------------------------------------------
-*/
 
 Route::get('/blog', [BlogController::class, 'home']);
 
