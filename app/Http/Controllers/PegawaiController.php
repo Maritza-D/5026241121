@@ -3,22 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class PegawaiController extends Controller
 {
-    // route parameter lama
+    // route parameter
     public function index($nama)
     {
         return $nama;
-    }
-
-    // tampil data pegawai dari database
-    public function pegawai()
-    {
-        $pegawai = DB::table('pegawai')->get();
-
-        return view('pegawai', ['pegawai' => $pegawai]);
     }
 
     // formulir
